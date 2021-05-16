@@ -2,10 +2,10 @@
   <div class="header-tittle">Contents</div>
 </div>
 <div class="body-container">
-  <a href="https://google.com" class="contents">
+  <a class="contents" (click)="onContentClick('Introduction')">
     <span>1. </span>Introduction .......................................
   </a>
-  <a href="https://google.com" class="contents">
+  <a class="contents" (click)="onContentClick('Projects')">
     <span>2. </span>My Projects ........................................
   </a>
   <a
@@ -14,9 +14,11 @@
   >
     <span>3. </span>Resume ..............................................
   </a>
-  <a href="https://google.com" class="contents"> <span>4. </span>Contact me .....................................</a>
+  <a class="contents" (click)="onContentClick('Contact')">
+    <span>4. </span>Contact me .....................................</a
+  >
 </div>
 
-<div>
+<div *ngIf="introduction">
   <app-intro></app-intro>
 </div>
