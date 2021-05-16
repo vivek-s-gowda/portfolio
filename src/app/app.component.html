@@ -1,24 +1,34 @@
-<div class="head-container">
-  <div class="header-tittle">Contents</div>
-</div>
-<div class="body-container">
-  <a class="contents" (click)="onContentClick('Introduction')">
-    <span>1. </span>Introduction .......................................
-  </a>
-  <a class="contents" (click)="onContentClick('Projects')">
-    <span>2. </span>My Projects ........................................
-  </a>
-  <a
-    href="https://drive.google.com/file/d/1h8ldUie778m3fGtkpy-7k4Q8gtpEdPfd/view?usp=sharing"
-    class="contents"
-  >
-    <span>3. </span>Resume ..............................................
-  </a>
-  <a class="contents" (click)="onContentClick('Contact')">
-    <span>4. </span>Contact me .....................................</a
-  >
+<div *ngIf="content">
+  <div class="head-container">
+    <div class="header-tittle">Contents</div>
+  </div>
+  <div class="body-container">
+    <a class="contents" (click)="onContentClick('Introduction')">
+      <span>1. </span>Introduction .......................................
+    </a>
+    <a class="contents" (click)="onContentClick('Projects')">
+      <span>2. </span>My Projects ........................................
+    </a>
+    <a
+      href="https://drive.google.com/file/d/1h8ldUie778m3fGtkpy-7k4Q8gtpEdPfd/view?usp=sharing"
+      class="contents"
+    >
+      <span>3. </span>Resume ..............................................
+    </a>
+    <a class="contents" (click)="onContentClick('Contact')">
+      <span>4. </span>Contact me .....................................</a
+    >
+  </div>
 </div>
 
 <div *ngIf="introduction">
+  <div class="top-head">
+    <div (click)="onContentClick('Content')" class="general-text btn">
+      < Content
+    </div>
+    <div (click)="onContentClick('Projects')" class="general-text btn">
+      My Projects >
+    </div>
+  </div>
   <app-intro></app-intro>
 </div>

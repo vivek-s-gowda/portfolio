@@ -1,29 +1,43 @@
-.head-container{
-    font-family: "syneMono";
-    display: flex;
-    justify-content: center;
-    .header-tittle {
-        font-size: 64px;
-    }
+.head-container {
+  font-family: "syneMono";
+  display: flex;
+  justify-content: center;
+  .header-tittle {
+    font-size: 5vw;
+  }
 }
 
-.body-container{
-    margin-top: 4rem;
-    margin-left: 3rem;
-    font-family: "syneMono";
-    display: flex;
-    flex-direction: column;
-    .contents{
-        font-size: 32px;
-        text-decoration: none;
-        color: black;
-        margin-bottom: 1rem;
-    }
-}
-
-.body-container .contents:hover{
-    font-style: italic;
-    cursor: pointer;
+.body-container {
+  margin-top: 4rem;
+  margin-left: 3rem;
+  font-family: "syneMono";
+  display: flex;
+  flex-direction: column;
+  .contents {
+    font-size: 2vw;
     text-decoration: none;
+    color: black;
+    margin-bottom: 1rem;
+  }
+}
+
+.body-container .contents:hover {
+  font-style: italic;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.general-text {
+  font-family: "syneMono";
+  font-size: 2vw;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.top-head{
+    display: flex;
+    justify-content: space-between;
 }
 
