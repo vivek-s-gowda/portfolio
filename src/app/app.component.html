@@ -1,4 +1,8 @@
-<div class="pan-area" (swipeleft)="swipeLeft('swiped left',counter)" (swiperight)="swipeRight('swiped right',counter)">
+<div
+  class="pan-area"
+  (swipeleft)="swipeLeft('swiped left', counter)"
+  (swiperight)="swipeRight('swiped right', counter)"
+>
   <div *ngIf="content">
     <div class="head-container">
       <div class="header-tittle">Portfolio</div>
@@ -27,6 +31,9 @@
       <div (click)="onContentClick('Content')" class="general-text btn">
         < Content
       </div>
+      <div class="general-text">
+        {{ message }}
+      </div>
       <div (click)="onContentClick('Projects')" class="general-text btn">
         My Projects >
       </div>
@@ -39,6 +46,9 @@
       <div (click)="onContentClick('Introduction')" class="general-text btn">
         < Introduction
       </div>
+      <div class="general-text">
+        {{ message }}
+      </div>
       <div (click)="onContentClick('Contact')" class="general-text btn">
         Contact >
       </div>
@@ -50,6 +60,9 @@
     <div class="top-head">
       <div (click)="onContentClick('Projects')" class="general-text btn">
         < Projects
+      </div>
+      <div class="general-text">
+        {{ message }}
       </div>
       <div (click)="onContentClick('Content')" class="general-text btn">
         Content >
