@@ -1,6 +1,8 @@
 .intro-container {
   display: flex;
   font-family: "syneMono";
+  flex-wrap: wrap;
+  
 
   .my-image {
     width: 32%;
@@ -12,5 +14,6 @@
     font-size: 2vw;
     margin-top: 3rem;
     margin-left: 4rem;
+    width: 60%;
   }
 }
