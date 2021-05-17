@@ -1,4 +1,4 @@
-<div *ngIf="content">
+<div *ngIf="content" (swipeleft)="say('swiped left')" (swiperight)="say('swiped right')">
   <div class="head-container">
     <div class="header-tittle">Contents</div>
   </div>

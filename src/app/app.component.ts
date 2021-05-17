@@ -39,4 +39,8 @@ export class AppComponent {
         break;
     }
   }
+
+  say(message) {
+    alert(message);
+  }
 }
