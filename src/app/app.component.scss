@@ -36,8 +36,12 @@
   cursor: pointer;
 }
 
-.top-head{
-    display: flex;
-    justify-content: space-between;
+.top-head {
+  display: flex;
+  justify-content: space-between;
 }
 
+.pan-area {
+  width: 100%;
+  height: 100%;
+}

@@ -1,59 +1,60 @@
-<div *ngIf="content" (swipeleft)="say('swiped left')" (swiperight)="say('swiped right')">
-  <div class="head-container">
-    <div class="header-tittle">Contents</div>
+<div class="pan-area" (swipeleft)="swipeLeft('swiped left',counter)" (swiperight)="swipeRight('swiped right',counter)">
+  <div *ngIf="content">
+    <div class="head-container">
+      <div class="header-tittle">Portfolio</div>
+    </div>
+    <div class="body-container">
+      <a class="contents" (click)="onContentClick('Introduction')">
+        <span>1. </span>Introduction .......................................
+      </a>
+      <a class="contents" (click)="onContentClick('Projects')">
+        <span>2. </span>My Projects ........................................
+      </a>
+      <a
+        href="https://drive.google.com/file/d/1h8ldUie778m3fGtkpy-7k4Q8gtpEdPfd/view?usp=sharing"
+        class="contents"
+      >
+        <span>3. </span>Resume ..............................................
+      </a>
+      <a class="contents" (click)="onContentClick('Contact')">
+        <span>4. </span>Contact me .....................................</a
+      >
+    </div>
   </div>
-  <div class="body-container">
-    <a class="contents" (click)="onContentClick('Introduction')">
-      <span>1. </span>Introduction .......................................
-    </a>
-    <a class="contents" (click)="onContentClick('Projects')">
-      <span>2. </span>My Projects ........................................
-    </a>
-    <a
-      href="https://drive.google.com/file/d/1h8ldUie778m3fGtkpy-7k4Q8gtpEdPfd/view?usp=sharing"
-      class="contents"
-    >
-      <span>3. </span>Resume ..............................................
-    </a>
-    <a class="contents" (click)="onContentClick('Contact')">
-      <span>4. </span>Contact me .....................................</a
-    >
-  </div>
-</div>
 
-<div *ngIf="introduction">
-  <div class="top-head">
-    <div (click)="onContentClick('Content')" class="general-text btn">
-      < Content
+  <div *ngIf="introduction">
+    <div class="top-head">
+      <div (click)="onContentClick('Content')" class="general-text btn">
+        < Content
+      </div>
+      <div (click)="onContentClick('Projects')" class="general-text btn">
+        My Projects >
+      </div>
     </div>
-    <div (click)="onContentClick('Projects')" class="general-text btn">
-      My Projects >
-    </div>
+    <app-intro></app-intro>
   </div>
-  <app-intro></app-intro>
-</div>
 
-
-<div *ngIf="projects">
-  <div class="top-head">
-    <div (click)="onContentClick('Introduction')" class="general-text btn">
-      < Introduction
+  <div *ngIf="projects">
+    <div class="top-head">
+      <div (click)="onContentClick('Introduction')" class="general-text btn">
+        < Introduction
+      </div>
+      <div (click)="onContentClick('Contact')" class="general-text btn">
+        Contact >
+      </div>
     </div>
-    <div (click)="onContentClick('Contact')" class="general-text btn">
-      Contact >
-    </div>
+    <app-projects></app-projects>
   </div>
-  <app-projects></app-projects>
-</div>
 
-<div *ngIf="contact">
-  <div class="top-head">
-    <div (click)="onContentClick('Projects')" class="general-text btn">
-      < Projects
+  <div *ngIf="contact">
+    <div class="top-head">
+      <div (click)="onContentClick('Projects')" class="general-text btn">
+        < Projects
+      </div>
+      <div (click)="onContentClick('Content')" class="general-text btn">
+        Content >
+      </div>
     </div>
-    <div (click)="onContentClick('Content')" class="general-text btn">
-      Content >
-    </div>
+    <app-contact></app-contact>
   </div>
-  <app-contact></app-contact>
 </div>

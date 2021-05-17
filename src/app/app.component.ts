@@ -11,6 +11,10 @@ export class AppComponent {
   projects: boolean = false;
   contact: boolean = false;
   content: boolean = true;
+  pages = ['Introduction', 'Projects', 'Contact', 'Content'];
+  currentPage = this.pages[3];
+  counter: number = 0;
+
   onContentClick(content: string) {
     switch (content) {
       case 'Introduction':
@@ -40,7 +44,20 @@ export class AppComponent {
     }
   }
 
-  say(message) {
-    alert(message);
+  swipeLeft(message, counter) {
+    if (counter == 4) counter = 0;
+    this.currentPage = this.pages[counter];
+    this.onContentClick(this.currentPage)
+    this.counter = counter + 1;
+    // alert(message + ' ' + counter + ' ' + this.currentPage);
+  }
+
+  swipeRight(message, counter) {
+    if (counter == -1) counter = 0;
+    this.currentPage = this.pages[counter];
+    this.onContentClick(this.currentPage)
+    this.counter = counter - 1;
+    if (this.counter == -1) counter = 0;
+    // alert(message + ' ' + counter + ' ' + this.currentPage);
   }
 }
