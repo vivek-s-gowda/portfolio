@@ -5,13 +5,45 @@
   .items {
     width: 40%;
     height: 10rem;
-    box-shadow: 5px 5px 5px 5px grey;
+    box-shadow: 0px 1px 19px 8px rgba(206, 203, 169, 0.8);
     margin-left: 2rem;
     margin-top: 3rem;
     border-radius: 10px;
+    display: flex;
+    // justify-content:stretch;
+    .image {
+      margin-top: 1%;
+      height: 90%;
+      margin-left: 1%;
+      width: 142px;
+      background-color: black;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .no-img {
+        color: blanchedalmond;
+        font-family: "syneMono";
+        font-size: 100px;
+        font-weight: 500;
+      }
+    }
+  }
+  .head-text {
+    margin-top: 1rem;
+    font-family: "syneMono";
+    font-size: 30px;
+    margin-left: 2rem;
+    width: 75%;
+    .content {
+      margin-top: 1rem;
+      font-family: "syneMono";
+      font-size: 24px;
+    }
   }
 }
 
 .body-container .items:hover {
-  box-shadow: 2px 2px 2px 2px grey;
+  box-shadow: 0px 1px 10px 8px rgba(206, 203, 169, 0.8);
+  cursor: pointer;
 }
