@@ -23,24 +23,28 @@ export class AppComponent {
         this.projects = false;
         this.contact = false;
         this.content = false;
+        this.currentPage = this.pages[1];
         break;
       case 'Projects':
         this.introduction = false;
         this.projects = true;
         this.contact = false;
         this.content = false;
+        this.currentPage = this.pages[2];
         break;
       case 'Contact':
         this.introduction = false;
         this.projects = false;
         this.contact = true;
         this.content = false;
+        this.currentPage = this.pages[3];
         break;
       case 'Content':
         this.introduction = false;
         this.projects = false;
         this.contact = false;
         this.content = true;
+        this.currentPage = this.pages[0];
         break;
     }
   }
