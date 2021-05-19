@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio';
   introduction: boolean = false;
   projects: boolean = false;
@@ -15,6 +15,12 @@ export class AppComponent {
   currentPage = this.pages[0];
   counter: number = 0;
   message: string;
+  isMobile: boolean = false;
+
+  ngOnInit() {
+    console.log('the window size is:', window.innerWidth);
+    this.isMobile = window.innerWidth <= 700 ? true : false;
+  }
 
   onContentClick(content: string) {
     switch (content) {

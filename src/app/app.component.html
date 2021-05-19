@@ -1,4 +1,5 @@
 <div
+  *ngIf="!isMobile"
   class="pan-area"
   (swipeleft)="swipeLeft('swiped left', counter)"
   (swiperight)="swipeRight('swiped right', counter)"
@@ -69,5 +70,11 @@
       </div>
     </div>
     <app-contact></app-contact>
+  </div>
+</div>
+
+<div *ngIf="isMobile" class="pan-area">
+  <div class="mobile-message">
+    <div class="text">Mobile device not supported</div>
   </div>
 </div>
