@@ -76,5 +76,10 @@
 <div *ngIf="isMobile" class="pan-area">
   <div class="mobile-message">
     <div class="text">Mobile device not supported</div>
+    <br />
+  </div>
+
+  <div class="general-text btn swith-to-desktop" (click)="isMobile = false">
+    Switch to Destop view
   </div>
 </div>
