@@ -11,6 +11,8 @@ import {
   HammerGestureConfig,
   HAMMER_GESTURE_CONFIG,
 } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
@@ -26,7 +28,7 @@ export class MyHammerConfig extends HammerGestureConfig {
     ProjectsComponent,
     ContactComponent,
   ],
-  imports: [BrowserModule, HammerModule],
+  imports: [BrowserModule, HammerModule, FontAwesomeModule],
   providers: [
     {
       provide: HAMMER_GESTURE_CONFIG,

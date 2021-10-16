@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { faFacebook, faGithub, faTwitter, faLinkedinIn,faAngular, faCss3, faJs, faHtml5 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   title = 'portfolio';
@@ -16,6 +17,15 @@ export class AppComponent implements OnInit {
   counter: number = 0;
   message: string;
   isMobile: boolean = false;
+  faFacebook = faFacebook ;
+  faGithub = faGithub; 
+  faTwitter = faTwitter;
+  faLinkedinIn = faLinkedinIn;
+  faAngular =faAngular;
+  faCss3 = faCss3;
+  faJs = faJs;
+  faHtml5 = faHtml5;
+  
 
   ngOnInit() {
     console.log('the window size is:', window.innerWidth);
@@ -71,4 +81,8 @@ export class AppComponent implements OnInit {
     if (this.counter == -1) counter = 3;
     this.message = message + ' ' + counter + ' ' + this.currentPage;
   }
+
+  
 }
+
+
