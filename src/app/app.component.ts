@@ -25,11 +25,23 @@ export class AppComponent implements OnInit {
   faCss3 = faCss3;
   faJs = faJs;
   faHtml5 = faHtml5;
+  isShown:boolean=false;
   
 
   ngOnInit() {
     console.log('the window size is:', window.innerWidth);
     this.isMobile = window.innerWidth <= 700 ? true : false;
+    // const navbarToggler:HTMLElement = document.querySelectbody.querySelector(".navbar-toggler");
+    // const responsiveNavItems = [].slice.call(
+    //   document.querySelectorAll("#navbarResponsive .nav-link")
+    // );
+    // responsiveNavItems.map(function (responsiveNavItem) {
+    //   responsiveNavItem.addEventListener("click", () => {
+    //     if (window.getComputedStyle(navbarToggler).display !== "none") {
+    //       navbarToggler.click();
+    //     }
+    //   });
+    // });
   }
 
   onContentClick(content: string) {
