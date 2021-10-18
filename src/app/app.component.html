@@ -164,7 +164,11 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive" [ngClass]="{ 'show': isShown }">
+      <div
+        class="collapse navbar-collapse"
+        id="navbarResponsive"
+        [ngClass]="{ show: isShown }"
+      >
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
@@ -172,6 +176,11 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience"
               >Experience</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#mywork"
+              >My Works</a
             >
           </li>
           <li class="nav-item">
@@ -188,7 +197,9 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Certification</a>
+            <a class="nav-link js-scroll-trigger" href="#awards"
+              >Certification</a
+            >
           </li>
         </ul>
       </div>
@@ -213,15 +224,21 @@
             <fa-icon [icon]="" size="lg"></fa-icon>
           </p>
           <div class="social-icons">
-            <a class="social-icon" href="https://www.linkedin.com/in/vivek-gowda-8455777b/">
-            <fa-icon [icon]="faLinkedinIn" size="lg"></fa-icon></a>
+            <a
+              class="social-icon"
+              href="https://www.linkedin.com/in/vivek-gowda-8455777b/"
+            >
+              <fa-icon [icon]="faLinkedinIn" size="lg"></fa-icon
+            ></a>
             <a class="social-icon" href="https://twitter.com/sgowdavivek">
-              <fa-icon [icon]="faTwitter" size="lg"></fa-icon></a>
+              <fa-icon [icon]="faTwitter" size="lg"></fa-icon
+            ></a>
             <a class="social-icon" href="https://github.com/vivek-s-gowda">
-              <fa-icon [icon]="faGithub" size="lg"></fa-icon></a>
-            <a class="social-icon" href="https://www.facebook.com/sgowdavivek/"
-              >
-              <fa-icon [icon]="faFacebook" size="lg"></fa-icon></a>
+              <fa-icon [icon]="faGithub" size="lg"></fa-icon
+            ></a>
+            <a class="social-icon" href="https://www.facebook.com/sgowdavivek/">
+              <fa-icon [icon]="faFacebook" size="lg"></fa-icon
+            ></a>
           </div>
         </div>
       </section>
@@ -300,6 +317,79 @@
         </div>
       </section>
       <hr class="m-0" />
+
+      <!-- My works -->
+      <section class="resume-section" id="mywork">
+        <div class="resume-section-content">
+          <h2 class="mb-5 text-primary">My Works</h2>
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">ICSF archives site</h3>
+              <div class="subheading mb-3">As freelancer ( UI developer )</div>
+              <p>
+                The International Collective in Support of Fishworkers (ICSF) is
+                an international non-governmental organization that works
+                towards the establishment of equitable, gender-just,self-reliant
+                and sustainable fisheries, particularly in the small-scale,
+                artisanal sector.
+              </p>
+              <a class="text-primary" href="http://icsfarchives.net/">
+                http://icsfarchives.net/
+              </a>
+            </div>
+            <!-- <div class="flex-shrink-0">
+              <span class="text-primary">August 2021 - Present</span>
+            </div> -->
+          </div>
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+          >
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Marriage Match</h3>
+              <div class="subheading mb-3">As Hobby project</div>
+              <p>
+                This project is done single haddedly in 2015 when i was studying
+                diploma in computer science, using visual basics this is a
+                windows application. The objective of this project is to find
+                your good life partner match using your name based on Hindhu
+                panchanga , Apart from that you can use this application to find
+                your nakshatra and zodiac sign (Raashi)
+              </p>
+              <a
+                class="text-primary"
+                href="https://drive.google.com/file/d/1Gji5Z3QSjQxPUovVpW37kdaIOD2_ezsK/view?usp=sharing"
+              >
+                Please find this application here
+              </a>
+            </div>
+            <!-- <div class="flex-shrink-0">
+              <span class="text-primary">November 2019 - July 2021</span>
+            </div> -->
+          </div>
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1">
+              <h3 class="mb-0">Nakshatra finder CLI application</h3>
+              <div class="subheading mb-3">As Hobby project</div>
+              <p>
+                This project is done using C language , This allow user to enter their name to get their Nakshatra using hindhu panchanga
+              </p>
+              <a
+              class="text-primary"
+              href="https://drive.google.com/file/d/1aYPRhZq70ZXlDCbQGRSIrqFo_7RN1zYn/view?usp=sharing"
+            >
+              Please find this application here
+            </a>
+            </div>
+            <!-- <div class="flex-shrink-0">
+              <span class="text-primary">February 2019 - November 2019</span>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <hr class="m-0" />
+
       <!-- Education-->
       <section class="resume-section" id="education">
         <div class="resume-section-content">
@@ -336,10 +426,16 @@
           <h2 class="mb-5 text-primary">Skills</h2>
           <div class="subheading mb-3">Programming Languages & Tools</div>
           <ul class="list-inline dev-icons">
-            <li class="list-inline-item"><fa-icon [icon]="faAngular" size="lg"></fa-icon></li>
+            <li class="list-inline-item">
+              <fa-icon [icon]="faAngular" size="lg"></fa-icon>
+            </li>
             <!-- <li class="list-inline-item"><fa-icon [icon]="faCss3" size="lg"></fa-icon></li> -->
-            <li class="list-inline-item"><fa-icon [icon]="faJs" size="lg"></fa-icon></li>
-            <li class="list-inline-item"><fa-icon [icon]="faHtml5" size="lg"></fa-icon></li>
+            <li class="list-inline-item">
+              <fa-icon [icon]="faJs" size="lg"></fa-icon>
+            </li>
+            <li class="list-inline-item">
+              <fa-icon [icon]="faHtml5" size="lg"></fa-icon>
+            </li>
             <!-- <li class="list-inline-item"><fa-icon [icon]="faAngular" size="lg"></fa-icon></i></li>
             <li class="list-inline-item"><i class="fab fa-react"></i></li>
             <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
@@ -392,37 +488,62 @@
       <!-- Awards-->
       <section class="resume-section" id="awards">
         <div class="resume-section-content">
-          <h2 class="mb-5  text-primary">Certifications</h2>
+          <h2 class="mb-5 text-primary">Certifications</h2>
           <ul class="">
             <li>
               <!-- <span class="fa-li"
                 ><i class="fas fa-trophy text-warning"></i
               ></span> -->
-              <a class="no-style" href="https://www.hackerrank.com/certificates/b6f0ef20669a"> Angular Certification from Hakerrank  </a>
+              <a
+                class="no-style"
+                href="https://www.hackerrank.com/certificates/b6f0ef20669a"
+              >
+                Angular Certification from Hakerrank
+              </a>
             </li>
             <li>
               <!-- <span class="fa-li"
                 ><i class="fas fa-trophy text-warning"></i
               ></span> -->
-              <a class="no-style" href="https://www.udemy.com/certificate/UC-470a1032-d17b-4134-a55d-123a14b2be5d/"> Angular Cource Completion Certification from Udemy  </a>
+              <a
+                class="no-style"
+                href="https://www.udemy.com/certificate/UC-470a1032-d17b-4134-a55d-123a14b2be5d/"
+              >
+                Angular Cource Completion Certification from Udemy
+              </a>
             </li>
             <li>
               <!-- <span class="fa-li"
                 ><i class="fas fa-trophy text-warning"></i
               ></span> -->
-              <a class="no-style" href="https://www.hackerrank.com/certificates/eaf155e444be"> CSS Certification from Hakerrank  </a>
+              <a
+                class="no-style"
+                href="https://www.hackerrank.com/certificates/eaf155e444be"
+              >
+                CSS Certification from Hakerrank
+              </a>
             </li>
             <li>
               <!-- <span class="fa-li"
                 ><i class="fas fa-trophy text-warning"></i
               ></span> -->
-              <a class="no-style" href="https://www.hackerrank.com/certificates/fb748ccf8599"> Javascript (indeterminate) Certification from Hakerrank  </a>
+              <a
+                class="no-style"
+                href="https://www.hackerrank.com/certificates/fb748ccf8599"
+              >
+                Javascript (indeterminate) Certification from Hakerrank
+              </a>
             </li>
             <li>
               <!-- <span class="fa-li"
                 ><i class="fas fa-trophy text-warning"></i
               ></span> -->
-              <a class="no-style" href="https://www.hackerrank.com/certificates/7dc848d59b8e"> Javascript (Basic) Certification from Hakerrank  </a>
+              <a
+                class="no-style"
+                href="https://www.hackerrank.com/certificates/7dc848d59b8e"
+              >
+                Javascript (Basic) Certification from Hakerrank
+              </a>
             </li>
             <!-- <li>
               <span class="fa-li"
